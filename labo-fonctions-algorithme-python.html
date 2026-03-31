@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Labo-lecture - fonctions en algorithmique et en Python</title>
+<link href="assets/style.css" rel="stylesheet"/>
+<link href="assets/print.css" media="print" rel="stylesheet"/>
+<link href="assets/unified_style.css" rel="stylesheet"/>
+<script defer="" src="assets/script.js"></script>
+<script defer="" src="assets/unified_script.js"></script>
+</head>
+<body id="top">
+<a aria-label="Retour en haut" class="back-to-top" href="#top">↑</a>
+<main class="document">
+<header class="document-header">
+<section aria-label="En-tête du cours" class="course-banner">
+<div class="banner-left">
+<div class="banner-photo-wrap">
+<img alt="Anis Ghaieb" class="banner-photo" src="img/anis.png"/>
+</div>
+<div class="banner-left-info">
+<p class="banner-name">Anis Ghaieb</p>
+<p class="banner-email">baniss2002@gmail.com</p>
+</div>
+</div>
+<div class="banner-center">
+<p class="banner-course">
+<span class="banner-course-line">PROGRAMMATION I</span>
+<span class="banner-course-line">INTRODUCTION AUX ALGORITHMES</span>
+</p>
+</div>
+<div class="banner-right">
+<img alt="Collège Universel" class="banner-logo" src="img/college.png"/>
+<p class="banner-college">
+<span class="banner-college-main">Collège Universel</span>
+<span class="banner-college-sub">Campus Montréal</span>
+</p>
+</div>
+</section>
+<section aria-label="Équipe" class="team-panel">
+<div class="team-panel-head"><h2 class="team-panel-title">Equipe</h2></div>
+<div class="team-grid">
+<label class="team-field" for="teamMember1"><span class="team-label">Nom1 :</span><input autocomplete="off" class="team-member-input" id="teamMember1" placeholder="Nom de l’étudiant 1" type="text"/></label>
+<label class="team-field" for="teamMember2"><span class="team-label">Nom2 :</span><input autocomplete="off" class="team-member-input" id="teamMember2" placeholder="Nom de l’étudiant 2" type="text"/></label>
+<label class="team-field" for="teamMember3"><span class="team-label">Nom3 :</span><input autocomplete="off" class="team-member-input" id="teamMember3" placeholder="Nom de l’étudiant 3" type="text"/></label>
+<label class="team-field" for="teamMember4"><span class="team-label">Nom4 :</span><input autocomplete="off" class="team-member-input" id="teamMember4" placeholder="Nom de l’étudiant 4" type="text"/></label>
+</div>
+</section>
+<div aria-hidden="true" class="team-print-card" id="teamPrint"></div>
+<div class="document-hero">
+<figure class="content-figure hero-figure">
+<img alt="Illustration du chapitre" class="content-image hero-image" src="img/chap.png"/>
+</figure>
+<p class="document-kicker">programmation — consolidation guidée</p>
+<h1 class="document-title">Labo-lecture : fonctions en algorithmique et en Python</h1>
+<p class="document-intro">
+Dans ce labo-lecture, vous allez reprendre la notion de fonction à travers une série de six tâches progressives. Certaines tâches vous demandent de compléter du code, d’autres de corriger une erreur logique, de modifier une fonction existante ou d’écrire vous-même une fonction à partir d’une consigne. Les boucles, les conditionnelles, les chaînes de caractères et les listes sont réinvesties de manière graduelle afin de rendre le travail clair, concret et directement exploitable dans VS Code.
+</p>
+</div>
+<section aria-label="Vue d’ensemble du labo" class="document-overview">
+<div class="overview-panel">
+<h2 class="overview-title">table des matières</h2>
+<nav aria-label="Table des matières du labo" class="toc-nav">
+<ul class="toc-list">
+
+<li class="toc-item toc-level-1"><a class="toc-link" href="#partie-2">Partie 1 — Tâche 1 : compter les voyelles</a></li>
+<li class="toc-item toc-level-1"><a class="toc-link" href="#partie-3">Partie 2 — Tâche 2 : vérifier une liste</a></li>
+<li class="toc-item toc-level-1"><a class="toc-link" href="#partie-4">Partie 3 — Tâche 3 : classer un mot</a></li>
+<li class="toc-item toc-level-1"><a class="toc-link" href="#partie-5">Partie 4 — Tâche 4 : compter les occurrences</a></li>
+<li class="toc-item toc-level-1"><a class="toc-link" href="#partie-6">Partie 5 — Tâche 5 : compter les nombres pairs</a></li>
+<li class="toc-item toc-level-1"><a class="toc-link" href="#partie-7">Partie 6 — Tâche 6 : mini problème complet</a></li>
+<li class="toc-item toc-level-1"><a class="toc-link" href="#partie-8">Partie 7 — Bilan final</a></li>
+<li class="toc-item toc-level-1"><a class="toc-link" href="#export">Exportation en PDF</a></li>
+</ul>
+</nav>
+</div>
+<div class="overview-panel">
+<h2 class="overview-title">objectifs de la série</h2>
+<ul class="goal-list">
+<li>Réutiliser la notion de fonction en algorithmique et en Python dans des situations simples, progressives et variées.</li>
+<li>Compléter, corriger ou modifier une fonction en respectant une consigne précise.</li>
+<li>Utiliser des boucles, des conditions, des chaînes de caractères et des listes à l’intérieur d’une fonction.</li>
+<li>Tester systématiquement un programme avec plusieurs cas avant de faire la capture.</li>
+<li>Développer une meilleure autonomie dans l’écriture et la vérification d’une fonction.</li>
+</ul>
+</div>
+</section>
+</header>
+
+<section class="part" id="partie-2">
+<div class="part-header"><h2 class="part-title">Partie 1 — Tâche 1 : compter les voyelles</h2></div>
+<div class="part-body">
+<section class="section-block line-section">
+<h3 class="section-title" id="p2-s1">Compléter une fonction simple sur une chaîne</h3>
+<div class="section-body">
+<p>Dans cette première tâche, vous réinvestissez une fonction simple avec une boucle et une condition sur une chaîne de caractères. L’objectif est de compléter la logique sans réécrire toute la fonction. Vous devez faire en sorte que la fonction compte correctement le nombre de voyelles présentes dans un mot. Les voyelles à considérer sont <strong>a, e, i, o, u</strong> et <strong>y</strong>.</p>
+<div class="code-demand-block spaced-block">
+<div class="code-demand-head">Algorithme à compléter</div>
+<pre>Fonction compterVoyelles(mot : chaîne) : entier
+    cpt ← 0
+    Pour chaque caractere dans mot faire
+        Si __________________________ alors
+            cpt ← ____________________
+        FinSi
+    FinPour
+    Retourner ____________________
+FinFonction
+
+Début
+    Ecrire(compterVoyelles("ordinateur"))
+Fin</pre>
+</div>
+<section class="snippet-embed">
+<section class="code-window theme-python">
+<div class="window-header">
+<div class="window-controls"><span></span><span></span><span></span></div>
+<div class="window-title">tache1_compter_voyelles.py</div>
+<button class="copy-btn" data-copy-mode="plain" data-copy-target="py-t1" type="button">Copier</button>
+</div>
+<div class="code-body">
+<div class="terminal-intro">Fichier Python — code à compléter dans VS Code</div>
+<div class="code-content" id="py-t1">
+<div class="line" data-copy="def compter_voyelles(mot):"><span class="line-no">1</span><span class="line-text">def compter_voyelles(mot):</span></div><div class="line" data-copy="    cpt = 0"><span class="line-no">2</span><span class="line-text">    cpt = 0</span></div><div class="line" data-copy="    for caractere in mot:"><span class="line-no">3</span><span class="line-text">    for caractere in mot:</span></div><div class="line" data-copy="        if __________________________:"><span class="line-no">4</span><span class="line-text">        if __________________________:</span></div><div class="line" data-copy="            cpt = ____________________"><span class="line-no">5</span><span class="line-text">            cpt = ____________________</span></div><div class="line" data-copy="    return ____________________"><span class="line-no">6</span><span class="line-text">    return ____________________</span></div><div class="line" data-copy=""><span class="line-no">7</span><span class="line-text"></span></div><div class="line" data-copy='print(compter_voyelles("ordinateur"))'><span class="line-no">8</span><span class="line-text">print(compter_voyelles("ordinateur"))</span></div>
+</div>
+</div>
+</section>
+</section>
+<div class="callout spaced-block">
+<strong>Travail demandé</strong>
+<ul class="list">
+<li>Complétez la condition qui permet de reconnaître une voyelle.</li><li>Complétez l’instruction qui augmente correctement le compteur.</li><li>Complétez l’instruction de retour.</li><li>Testez la fonction avec plusieurs mots avant de faire la capture.</li>
+</ul>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Test suggéré</th><th>Ce qu’il faut vérifier</th></tr>
+</thead>
+<tbody>
+<tr><td><code>ordinateur</code></td><td>Vérifiez que plusieurs voyelles sont comptées.</td></tr><tr><td><code>chat</code></td><td>Vérifiez qu’un mot court fonctionne correctement.</td></tr><tr><td><code>ecole</code></td><td>Vérifiez qu’un mot avec plusieurs voyelles simples donne un résultat cohérent.</td></tr><tr><td><code>python</code></td><td>Vérifiez le rôle de la lettre y dans votre condition.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="resultblock">
+<div aria-label="Affichage sur écran" class="pcframe screen-m">
+<img alt="Écran PC" src="img/pc.png"/>
+<div class="pcinner">
+<pre class="shell resultpre">Exemple de vérification possible
+ordinateur -&gt; le programme doit retourner un entier cohérent avec le nombre de voyelles trouvées
+chat -&gt; le programme doit retourner un entier plus petit
+python -&gt; le résultat dépend de la manière dont vous avez traité y</pre>
+</div>
+</div>
+</div>
+<div class="proof callout spaced-block" data-proof-id="p2-proof">
+<div class="proof-head">
+<div><strong>Capture obligatoire :</strong> montrez le code complété dans VS Code ainsi qu’une exécution avec au moins deux mots de test.</div>
+</div>
+<div class="proof-body" tabindex="0" title="Cliquez ici puis collez une image depuis le presse-papiers avec Ctrl+V">
+<div class="proofEmpty"><button class="btnCapture proofInsertLink" type="button">Insérer</button> ici la capture demandée.<div class="proofPasteHint">ou collez une image enregistrée dans le presse-papiers avec Ctrl+V.</div></div>
+<img alt="Capture de l’étudiant" class="proofImg"/>
+<input accept="image/*" class="proofFile" hidden="" type="file"/>
+<div class="proofBodyActions"><button class="btnClear proofRemoveLink" type="button">retirer la capture</button></div>
+</div>
+</div><div class="callout spaced-block"><strong>Questions pédagogiques</strong><ul class="list"><li>Quel est le rôle du paramètre <strong>mot</strong> dans la fonction <strong>compter_voyelles(mot)</strong> ?</li><li>À quel moment la variable <strong>cpt</strong> augmente-t-elle pendant l’exécution de la boucle ?</li><li>Que représente l’appel <strong>print(compter_voyelles("ordinateur"))</strong> dans le programme principal ?</li></ul><div class="answer-area"><textarea class="team-input answerbox-large" id="p2-questions" placeholder="Répondez ici en expliquant le fonctionnement de la fonction et de son appel..."></textarea></div></div>
+</div>
+</section>
+</div>
+</section>
+<section class="part" id="partie-3">
+<div class="part-header"><h2 class="part-title">Partie 2 — Tâche 2 : vérifier une liste</h2></div>
+<div class="part-body">
+<section class="section-block line-section">
+<h3 class="section-title" id="p3-s1">Identifier puis corriger une erreur logique</h3>
+<div class="section-body">
+<p>Dans cette tâche, vous travaillez avec une liste, une boucle et une condition. La fonction doit vérifier si une liste contient au moins une valeur négative. Si c’est le cas, elle doit retourner <strong>liste non valide</strong>. Sinon, elle doit retourner <strong>liste valide</strong>. Le programme fourni contient des erreurs logiques qu’il faut corriger.</p>
+<div class="code-demand-block spaced-block">
+<div class="code-demand-head">Algorithme à corriger</div>
+<pre>Fonction verifierListe(tab : tableau d'entiers) : chaîne
+    Pour chaque valeur dans tab faire
+        Si valeur &gt; 0 alors
+            Retourner "liste non valide"
+        FinSi
+    FinPour
+    Retourner "liste non valide"
+FinFonction
+
+Début
+    Ecrire(verifierListe([4, 7, 2, 9]))
+    Ecrire(verifierListe([4, -1, 8, 3]))
+Fin</pre>
+</div>
+<section class="snippet-embed">
+<section class="code-window theme-python">
+<div class="window-header">
+<div class="window-controls"><span></span><span></span><span></span></div>
+<div class="window-title">tache2_verifier_liste.py</div>
+<button class="copy-btn" data-copy-mode="plain" data-copy-target="py-t2" type="button">Copier</button>
+</div>
+<div class="code-body">
+<div class="terminal-intro">Fichier Python — code à corriger</div>
+<div class="code-content" id="py-t2">
+<div class="line" data-copy="def verifier_liste(tab):"><span class="line-no">1</span><span class="line-text">def verifier_liste(tab):</span></div><div class="line" data-copy="    for valeur in tab:"><span class="line-no">2</span><span class="line-text">    for valeur in tab:</span></div><div class="line" data-copy="        if valeur &gt; 0:"><span class="line-no">3</span><span class="line-text">        if valeur &gt; 0:</span></div><div class="line" data-copy='            return "liste non valide"'><span class="line-no">4</span><span class="line-text">            return "liste non valide"</span></div><div class="line" data-copy='    return "liste non valide"'><span class="line-no">5</span><span class="line-text">    return "liste non valide"</span></div><div class="line" data-copy=""><span class="line-no">6</span><span class="line-text"></span></div><div class="line" data-copy="print(verifier_liste([4, 7, 2, 9]))"><span class="line-no">7</span><span class="line-text">print(verifier_liste([4, 7, 2, 9]))</span></div><div class="line" data-copy="print(verifier_liste([4, -1, 8, 3]))"><span class="line-no">8</span><span class="line-text">print(verifier_liste([4, -1, 8, 3]))</span></div>
+</div>
+</div>
+</section>
+</section>
+<div class="callout spaced-block">
+<strong>Travail demandé</strong>
+<ul class="list">
+<li>Corrigez la condition pour qu’elle détecte réellement le cas attendu.</li><li>Corrigez le message retourné au bon moment.</li><li>Corrigez le retour final lorsque aucun nombre négatif n’a été trouvé.</li><li>Exécutez la fonction avec plusieurs listes pour valider votre correction.</li>
+</ul>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Test suggéré</th><th>Ce qu’il faut vérifier</th></tr>
+</thead>
+<tbody>
+<tr><td><code>[4, 7, 2, 9]</code></td><td>La liste ne contient aucun nombre négatif.</td></tr><tr><td><code>[4, -1, 8, 3]</code></td><td>La présence de -1 doit rendre la liste non valide.</td></tr><tr><td><code>[0, 5, 6]</code></td><td>Vérifiez qu’une valeur nulle ne déclenche pas le mauvais cas.</td></tr><tr><td><code>[-2, 1, 3]</code></td><td>La liste doit être détectée comme non valide dès qu’un nombre négatif apparaît.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="resultblock">
+<div aria-label="Affichage sur écran" class="pcframe screen-m">
+<img alt="Écran PC" src="img/pc.png"/>
+<div class="pcinner">
+<pre class="shell resultpre">Exemple de vérification possible
+[4, 7, 2, 9] -&gt; liste valide
+[4, -1, 8, 3] -&gt; liste non valide</pre>
+</div>
+</div>
+</div>
+<div class="proof callout spaced-block" data-proof-id="p3-proof">
+<div class="proof-head">
+<div><strong>Capture obligatoire :</strong> montrez la fonction corrigée et les résultats obtenus avec au moins deux listes différentes.</div>
+</div>
+<div class="proof-body" tabindex="0" title="Cliquez ici puis collez une image depuis le presse-papiers avec Ctrl+V">
+<div class="proofEmpty"><button class="btnCapture proofInsertLink" type="button">Insérer</button> ici la capture demandée.<div class="proofPasteHint">ou collez une image enregistrée dans le presse-papiers avec Ctrl+V.</div></div>
+<img alt="Capture de l’étudiant" class="proofImg"/>
+<input accept="image/*" class="proofFile" hidden="" type="file"/>
+<div class="proofBodyActions"><button class="btnClear proofRemoveLink" type="button">retirer la capture</button></div>
+</div>
+</div><div class="callout spaced-block"><strong>Questions pédagogiques</strong><ul class="list"><li>Pourquoi peut-on retourner <strong>"liste non valide"</strong> dès qu’une valeur négative est trouvée dans la boucle ?</li><li>Que doit retourner la fonction si elle parcourt toute la liste sans rencontrer de nombre négatif ?</li><li>Que signifie l’appel <strong>verifier_liste([4, -1, 8, 3])</strong> et quelle donnée est transmise au paramètre <strong>tab</strong> ?</li></ul><div class="answer-area"><textarea class="team-input answerbox-large" id="p3-questions" placeholder="Expliquez ici ce que fait la fonction, comment elle décide du résultat et comment elle est appelée..."></textarea></div></div>
+</div>
+</section>
+</div>
+</section>
+<section class="part" id="partie-4">
+<div class="part-header"><h2 class="part-title">Partie 3 — Tâche 3 : classer un mot</h2></div>
+<div class="part-body">
+<section class="section-block line-section">
+<h3 class="section-title" id="p4-s1">Passer de deux cas à trois cas</h3>
+<div class="section-body">
+<p>Cette tâche consiste à modifier une fonction existante en changeant sa logique. La version actuelle distingue seulement deux cas. Vous devez la transformer pour respecter la règle suivante : <strong>mot court</strong> si le mot contient moins de 5 caractères, <strong>mot moyen</strong> s’il contient entre 5 et 8 caractères, sinon <strong>mot long</strong>.</p>
+<div class="code-demand-block spaced-block">
+<div class="code-demand-head">Algorithme à modifier</div>
+<pre>Fonction classerMot(mot : chaîne) : chaîne
+    Si longueur(mot) &lt; 5 alors
+        Retourner "mot court"
+    Sinon
+        Retourner "mot long"
+    FinSi
+FinFonction
+
+Début
+    Ecrire(classerMot("chat"))
+    Ecrire(classerMot("voiture"))
+    Ecrire(classerMot("programmation"))
+Fin</pre>
+</div>
+<section class="snippet-embed">
+<section class="code-window theme-python">
+<div class="window-header">
+<div class="window-controls"><span></span><span></span><span></span></div>
+<div class="window-title">tache3_classer_mot.py</div>
+<button class="copy-btn" data-copy-mode="plain" data-copy-target="py-t3" type="button">Copier</button>
+</div>
+<div class="code-body">
+<div class="terminal-intro">Fichier Python — logique à modifier</div>
+<div class="code-content" id="py-t3">
+<div class="line" data-copy="def classer_mot(mot):"><span class="line-no">1</span><span class="line-text">def classer_mot(mot):</span></div><div class="line" data-copy="    if len(mot) &lt; 5:"><span class="line-no">2</span><span class="line-text">    if len(mot) &lt; 5:</span></div><div class="line" data-copy='        return "mot court"'><span class="line-no">3</span><span class="line-text">        return "mot court"</span></div><div class="line" data-copy="    else:"><span class="line-no">4</span><span class="line-text">    else:</span></div><div class="line" data-copy='        return "mot long"'><span class="line-no">5</span><span class="line-text">        return "mot long"</span></div><div class="line" data-copy=""><span class="line-no">6</span><span class="line-text"></span></div><div class="line" data-copy='print(classer_mot("chat"))'><span class="line-no">7</span><span class="line-text">print(classer_mot("chat"))</span></div><div class="line" data-copy='print(classer_mot("voiture"))'><span class="line-no">8</span><span class="line-text">print(classer_mot("voiture"))</span></div><div class="line" data-copy='print(classer_mot("programmation"))'><span class="line-no">9</span><span class="line-text">print(classer_mot("programmation"))</span></div>
+</div>
+</div>
+</section>
+</section>
+<div class="callout spaced-block">
+<strong>Travail demandé</strong>
+<ul class="list">
+<li>Ajoutez un troisième cas à la logique existante.</li><li>Utilisez correctement les mots-clés if, elif et else.</li><li>Vérifiez que chaque mot aboutit à une seule catégorie.</li><li>Testez la fonction avec plusieurs longueurs différentes.</li>
+</ul>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Test suggéré</th><th>Ce qu’il faut vérifier</th></tr>
+</thead>
+<tbody>
+<tr><td><code>chat</code></td><td>Doit être classé comme mot court.</td></tr><tr><td><code>voiture</code></td><td>Doit être classé comme mot moyen.</td></tr><tr><td><code>ordinateur</code></td><td>Vérifiez si la longueur le place dans mot long.</td></tr><tr><td><code>soleil</code></td><td>Contrôlez le cas intermédiaire avec un autre mot.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="resultblock">
+<div aria-label="Affichage sur écran" class="pcframe screen-m">
+<img alt="Écran PC" src="img/pc.png"/>
+<div class="pcinner">
+<pre class="shell resultpre">Exemple de vérification possible
+chat -&gt; mot court
+voiture -&gt; mot moyen
+programmation -&gt; mot long</pre>
+</div>
+</div>
+</div>
+<div class="proof callout spaced-block" data-proof-id="p4-proof">
+<div class="proof-head">
+<div><strong>Capture obligatoire :</strong> montrez le code modifié et une exécution qui affiche les trois catégories attendues.</div>
+</div>
+<div class="proof-body" tabindex="0" title="Cliquez ici puis collez une image depuis le presse-papiers avec Ctrl+V">
+<div class="proofEmpty"><button class="btnCapture proofInsertLink" type="button">Insérer</button> ici la capture demandée.<div class="proofPasteHint">ou collez une image enregistrée dans le presse-papiers avec Ctrl+V.</div></div>
+<img alt="Capture de l’étudiant" class="proofImg"/>
+<input accept="image/*" class="proofFile" hidden="" type="file"/>
+<div class="proofBodyActions"><button class="btnClear proofRemoveLink" type="button">retirer la capture</button></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+<section class="part" id="partie-5">
+<div class="part-header"><h2 class="part-title">Partie 4 — Tâche 4 : compter les occurrences</h2></div>
+<div class="part-body">
+<section class="section-block line-section">
+<h3 class="section-title" id="p5-s1">Réutiliser une boucle avec deux paramètres</h3>
+<div class="section-body">
+<p>Dans cette tâche, vous complétez une fonction qui reçoit deux paramètres : un texte et une lettre. Le but est de parcourir le texte caractère par caractère afin de compter combien de fois la lettre apparaît. Vous devez donc compléter la comparaison, l’incrémentation du compteur et le retour final.</p>
+<div class="code-demand-block spaced-block">
+<div class="code-demand-head">Algorithme à compléter</div>
+<pre>Fonction compterOccurrences(texte : chaîne, lettre : caractère) : entier
+    cpt ← 0
+    Pour chaque car dans texte faire
+        Si __________________________ alors
+            cpt ← ____________________
+        FinSi
+    FinPour
+    Retourner ____________________
+FinFonction
+
+Début
+    Ecrire(compterOccurrences("banane", "a"))
+Fin</pre>
+</div>
+<section class="snippet-embed">
+<section class="code-window theme-python">
+<div class="window-header">
+<div class="window-controls"><span></span><span></span><span></span></div>
+<div class="window-title">tache4_compter_occurrences.py</div>
+<button class="copy-btn" data-copy-mode="plain" data-copy-target="py-t4" type="button">Copier</button>
+</div>
+<div class="code-body">
+<div class="terminal-intro">Fichier Python — code à compléter</div>
+<div class="code-content" id="py-t4">
+<div class="line" data-copy="def compter_occurrences(texte, lettre):"><span class="line-no">1</span><span class="line-text">def compter_occurrences(texte, lettre):</span></div><div class="line" data-copy="    cpt = 0"><span class="line-no">2</span><span class="line-text">    cpt = 0</span></div><div class="line" data-copy="    for car in texte:"><span class="line-no">3</span><span class="line-text">    for car in texte:</span></div><div class="line" data-copy="        if __________________________:"><span class="line-no">4</span><span class="line-text">        if __________________________:</span></div><div class="line" data-copy="            cpt = ____________________"><span class="line-no">5</span><span class="line-text">            cpt = ____________________</span></div><div class="line" data-copy="    return ____________________"><span class="line-no">6</span><span class="line-text">    return ____________________</span></div><div class="line" data-copy=""><span class="line-no">7</span><span class="line-text"></span></div><div class="line" data-copy='print(compter_occurrences("banane", "a"))'><span class="line-no">8</span><span class="line-text">print(compter_occurrences("banane", "a"))</span></div>
+</div>
+</div>
+</section>
+</section>
+<div class="callout spaced-block">
+<strong>Travail demandé</strong>
+<ul class="list">
+<li>Complétez la condition qui compare le caractère courant à la lettre cherchée.</li><li>Complétez la ligne qui augmente le compteur.</li><li>Complétez l’instruction de retour.</li><li>Testez avec plusieurs textes et plusieurs lettres.</li>
+</ul>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Test suggéré</th><th>Ce qu’il faut vérifier</th></tr>
+</thead>
+<tbody>
+<tr><td><code>("banane", "a")</code></td><td>Vérifiez qu’une lettre répétée plusieurs fois est bien comptée.</td></tr><tr><td><code>("programmation", "m")</code></td><td>Vérifiez un cas avec une consonne répétée.</td></tr><tr><td><code>("ordinateur", "o")</code></td><td>Contrôlez le comptage avec une seule lettre précise.</td></tr><tr><td><code>("python", "z")</code></td><td>Le résultat doit rester cohérent lorsqu’aucune occurrence n’est trouvée.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="resultblock">
+<div aria-label="Affichage sur écran" class="pcframe screen-m">
+<img alt="Écran PC" src="img/pc.png"/>
+<div class="pcinner">
+<pre class="shell resultpre">Exemple de vérification possible
+("banane", "a") -&gt; 3
+("python", "z") -&gt; 0</pre>
+</div>
+</div>
+</div>
+<div class="proof callout spaced-block" data-proof-id="p5-proof">
+<div class="proof-head">
+<div><strong>Capture obligatoire :</strong> montrez la fonction complétée et son exécution avec au moins deux tests différents.</div>
+</div>
+<div class="proof-body" tabindex="0" title="Cliquez ici puis collez une image depuis le presse-papiers avec Ctrl+V">
+<div class="proofEmpty"><button class="btnCapture proofInsertLink" type="button">Insérer</button> ici la capture demandée.<div class="proofPasteHint">ou collez une image enregistrée dans le presse-papiers avec Ctrl+V.</div></div>
+<img alt="Capture de l’étudiant" class="proofImg"/>
+<input accept="image/*" class="proofFile" hidden="" type="file"/>
+<div class="proofBodyActions"><button class="btnClear proofRemoveLink" type="button">retirer la capture</button></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+<section class="part" id="partie-6">
+<div class="part-header"><h2 class="part-title">Partie 5 — Tâche 5 : compter les nombres pairs</h2></div>
+<div class="part-body">
+<section class="section-block line-section">
+<h3 class="section-title" id="p6-s1">Écrire une fonction simple à partir d’une consigne</h3>
+<div class="section-body">
+<p>Ici, aucune fonction complète n’est fournie. Vous devez écrire vous-même une fonction qui reçoit une liste de nombres et retourne combien de nombres pairs se trouvent dans cette liste. Cette tâche demande donc davantage d’autonomie, tout en restant guidée par une logique simple et progressive.</p>
+<div class="code-demand-block spaced-block">
+<div class="code-demand-head">Aide attendue en algorithmique</div>
+<pre>1. créer un compteur à 0
+2. parcourir la liste
+3. vérifier si chaque nombre est divisible par 2
+4. augmenter le compteur quand le nombre est pair
+5. retourner le compteur</pre>
+</div>
+<div class="code-demand-block spaced-block">
+<div class="code-demand-head">Point de départ en algorithmique</div>
+<pre>Fonction compterPairs(tab : tableau d'entiers) : entier
+    __________________________
+    Pour chaque nombre dans tab faire
+        Si __________________________ alors
+            __________________________
+        FinSi
+    FinPour
+    Retourner ____________________
+FinFonction</pre>
+</div>
+<section class="snippet-embed">
+<section class="code-window theme-python">
+<div class="window-header">
+<div class="window-controls"><span></span><span></span><span></span></div>
+<div class="window-title">tache5_compter_pairs.py</div>
+<button class="copy-btn" data-copy-mode="plain" data-copy-target="py-t5" type="button">Copier</button>
+</div>
+<div class="code-body">
+<div class="terminal-intro">Fichier Python — fonction à écrire</div>
+<div class="code-content" id="py-t5">
+<div class="line" data-copy="def compter_pairs(tab):"><span class="line-no">1</span><span class="line-text">def compter_pairs(tab):</span></div><div class="line" data-copy="    __________________________"><span class="line-no">2</span><span class="line-text">    __________________________</span></div><div class="line" data-copy="    for nombre in tab:"><span class="line-no">3</span><span class="line-text">    for nombre in tab:</span></div><div class="line" data-copy="        if __________________________:"><span class="line-no">4</span><span class="line-text">        if __________________________:</span></div><div class="line" data-copy="            __________________________"><span class="line-no">5</span><span class="line-text">            __________________________</span></div><div class="line" data-copy="    return ____________________"><span class="line-no">6</span><span class="line-text">    return ____________________</span></div>
+</div>
+</div>
+</section>
+</section>
+<div class="callout spaced-block">
+<strong>Travail demandé</strong>
+<ul class="list">
+<li>Écrivez l’en-tête de la fonction.</li><li>Créez la variable compteur.</li><li>Parcourez correctement la liste.</li><li>Écrivez la condition qui vérifie si un nombre est pair.</li><li>Retournez le compteur à la fin de la fonction.</li>
+</ul>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Test suggéré</th><th>Ce qu’il faut vérifier</th></tr>
+</thead>
+<tbody>
+<tr><td><code>[2, 5, 8, 11, 14]</code></td><td>Comptez les nombres pairs présents dans une liste mixte.</td></tr><tr><td><code>[1, 3, 5, 7]</code></td><td>Vérifiez le comportement lorsqu’aucun nombre pair n’est présent.</td></tr><tr><td><code>[4, 6, 10, 13, 15, 20]</code></td><td>Vérifiez le comptage avec plusieurs nombres pairs.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="resultblock">
+<div aria-label="Affichage sur écran" class="pcframe screen-m">
+<img alt="Écran PC" src="img/pc.png"/>
+<div class="pcinner">
+<pre class="shell resultpre">Exemple de vérification possible
+[2, 5, 8, 11, 14] -&gt; 3
+[1, 3, 5, 7] -&gt; 0</pre>
+</div>
+</div>
+</div>
+<div class="proof callout spaced-block" data-proof-id="p6-proof">
+<div class="proof-head">
+<div><strong>Capture obligatoire :</strong> montrez votre fonction écrite par vous-même et une exécution correcte avec au moins deux listes.</div>
+</div>
+<div class="proof-body" tabindex="0" title="Cliquez ici puis collez une image depuis le presse-papiers avec Ctrl+V">
+<div class="proofEmpty"><button class="btnCapture proofInsertLink" type="button">Insérer</button> ici la capture demandée.<div class="proofPasteHint">ou collez une image enregistrée dans le presse-papiers avec Ctrl+V.</div></div>
+<img alt="Capture de l’étudiant" class="proofImg"/>
+<input accept="image/*" class="proofFile" hidden="" type="file"/>
+<div class="proofBodyActions"><button class="btnClear proofRemoveLink" type="button">retirer la capture</button></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+<section class="part" id="partie-7">
+<div class="part-header"><h2 class="part-title">Partie 6 — Tâche 6 : mini problème complet</h2></div>
+<div class="part-body">
+<section class="section-block line-section">
+<h3 class="section-title" id="p7-s1">Compléter, corriger puis exécuter un petit programme complet</h3>
+<div class="section-body">
+<p>Cette dernière tâche réinvestit la notion de fonction dans un programme un peu plus riche. Le programme doit analyser une liste de mots à l’aide de plusieurs fonctions : une fonction qui détecte la présence de la lettre <strong>a</strong>, une fonction qui compte les mots contenant cette lettre, une fonction qui retrouve le mot le plus long et une fonction qui signale la présence éventuelle d’un mot vide. Une partie du code est donnée, une partie doit être complétée et une autre doit être corrigée.</p>
+<div class="code-demand-block spaced-block">
+<div class="code-demand-head">Algorithme déjà donné</div>
+<pre>Fonction contientA(mot : chaîne) : booléen
+    Pour chaque car dans mot faire
+        Si car = "a" alors
+            Retourner Vrai
+        FinSi
+    FinPour
+    Retourner Faux
+FinFonction</pre>
+</div>
+<div class="code-demand-block spaced-block">
+<div class="code-demand-head">Algorithmes à compléter ou corriger</div>
+<pre>Fonction compterMotsAvecA(listeMots) : entier
+    cpt ← 0
+    Pour chaque mot dans listeMots faire
+        Si __________________________ alors
+            cpt ← cpt + 1
+        FinSi
+    FinPour
+    Retourner cpt
+FinFonction
+
+Fonction motPlusLong(listeMots) : chaîne
+    plusLong ← listeMots[0]
+    Pour chaque mot dans listeMots faire
+        Si longueur(mot) &lt; longueur(plusLong) alors
+            plusLong ← mot
+        FinSi
+    FinPour
+    Retourner plusLong
+FinFonction
+
+Fonction verifierMotVide(listeMots) : chaîne
+    Pour chaque mot dans listeMots faire
+        Si mot = "" alors
+            Retourner "il existe un mot vide"
+        FinSi
+    FinPour
+    Retourner "aucun mot vide"
+FinFonction</pre>
+</div>
+<section class="snippet-embed">
+<section class="code-window theme-python">
+<div class="window-header">
+<div class="window-controls"><span></span><span></span><span></span></div>
+<div class="window-title">tache6_programme_fonctions.py</div>
+<button class="copy-btn" data-copy-mode="plain" data-copy-target="py-t6" type="button">Copier</button>
+</div>
+<div class="code-body">
+<div class="terminal-intro">Fichier Python — programme partiellement donné</div>
+<div class="code-content" id="py-t6">
+<div class="line" data-copy="def contient_a(mot):"><span class="line-no">1</span><span class="line-text">def contient_a(mot):</span></div><div class="line" data-copy="    for car in mot:"><span class="line-no">2</span><span class="line-text">    for car in mot:</span></div><div class="line" data-copy='        if car == "a":'><span class="line-no">3</span><span class="line-text">        if car == "a":</span></div><div class="line" data-copy="            return True"><span class="line-no">4</span><span class="line-text">            return True</span></div><div class="line" data-copy="    return False"><span class="line-no">5</span><span class="line-text">    return False</span></div><div class="line" data-copy=""><span class="line-no">6</span><span class="line-text"></span></div><div class="line" data-copy="def compter_mots_avec_a(liste_mots):"><span class="line-no">7</span><span class="line-text">def compter_mots_avec_a(liste_mots):</span></div><div class="line" data-copy="    cpt = 0"><span class="line-no">8</span><span class="line-text">    cpt = 0</span></div><div class="line" data-copy="    for mot in liste_mots:"><span class="line-no">9</span><span class="line-text">    for mot in liste_mots:</span></div><div class="line" data-copy="        if __________________________:"><span class="line-no">10</span><span class="line-text">        if __________________________:</span></div><div class="line" data-copy="            cpt = cpt + 1"><span class="line-no">11</span><span class="line-text">            cpt = cpt + 1</span></div><div class="line" data-copy="    return cpt"><span class="line-no">12</span><span class="line-text">    return cpt</span></div><div class="line" data-copy=""><span class="line-no">13</span><span class="line-text"></span></div><div class="line" data-copy="def mot_plus_long(liste_mots):"><span class="line-no">14</span><span class="line-text">def mot_plus_long(liste_mots):</span></div><div class="line" data-copy="    plus_long = liste_mots[0]"><span class="line-no">15</span><span class="line-text">    plus_long = liste_mots[0]</span></div><div class="line" data-copy="    for mot in liste_mots:"><span class="line-no">16</span><span class="line-text">    for mot in liste_mots:</span></div><div class="line" data-copy="        if len(mot) &lt; len(plus_long):"><span class="line-no">17</span><span class="line-text">        if len(mot) &lt; len(plus_long):</span></div><div class="line" data-copy="            plus_long = mot"><span class="line-no">18</span><span class="line-text">            plus_long = mot</span></div><div class="line" data-copy="    return plus_long"><span class="line-no">19</span><span class="line-text">    return plus_long</span></div><div class="line" data-copy=""><span class="line-no">20</span><span class="line-text"></span></div><div class="line" data-copy="def verifier_mot_vide(liste_mots):"><span class="line-no">21</span><span class="line-text">def verifier_mot_vide(liste_mots):</span></div><div class="line" data-copy="    for mot in liste_mots:"><span class="line-no">22</span><span class="line-text">    for mot in liste_mots:</span></div><div class="line" data-copy='        if mot == "":'><span class="line-no">23</span><span class="line-text">        if mot == "":</span></div><div class="line" data-copy='            return "il existe un mot vide"'><span class="line-no">24</span><span class="line-text">            return "il existe un mot vide"</span></div><div class="line" data-copy='    return "aucun mot vide"'><span class="line-no">25</span><span class="line-text">    return "aucun mot vide"</span></div><div class="line" data-copy=""><span class="line-no">26</span><span class="line-text"></span></div><div class="line" data-copy='liste = ["chat", "banane", "", "avion", "soleil"]'><span class="line-no">27</span><span class="line-text">liste = ["chat", "banane", "", "avion", "soleil"]</span></div><div class="line" data-copy="print(compter_mots_avec_a(liste))"><span class="line-no">28</span><span class="line-text">print(compter_mots_avec_a(liste))</span></div><div class="line" data-copy="print(mot_plus_long(liste))"><span class="line-no">29</span><span class="line-text">print(mot_plus_long(liste))</span></div><div class="line" data-copy="print(verifier_mot_vide(liste))"><span class="line-no">30</span><span class="line-text">print(verifier_mot_vide(liste))</span></div>
+</div>
+</div>
+</section>
+</section>
+<div class="callout spaced-block">
+<strong>Travail demandé</strong>
+<ul class="list">
+<li>Complétez l’appel correct dans compter_mots_avec_a.</li><li>Corrigez l’erreur logique dans mot_plus_long.</li><li>Exécutez le programme complet avec la liste fournie.</li><li>Expliquez le rôle de chaque fonction.</li>
+</ul>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Test suggéré</th><th>Ce qu’il faut vérifier</th></tr>
+</thead>
+<tbody>
+<tr><td><code>["chat", "banane", "", "avion", "soleil"]</code></td><td>Vérifiez le nombre de mots contenant la lettre a, le mot le plus long et la détection du mot vide.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="resultblock">
+<div aria-label="Affichage sur écran" class="pcframe screen-m">
+<img alt="Écran PC" src="img/pc.png"/>
+<div class="pcinner">
+<pre class="shell resultpre">Exemple de vérification possible
+Liste utilisée : ["chat", "banane", "", "avion", "soleil"]
+Le programme doit afficher trois résultats cohérents :
+- le nombre de mots contenant la lettre a
+- le mot le plus long
+- le message indiquant si un mot vide existe</pre>
+</div>
+</div>
+</div>
+<div class="proof callout spaced-block" data-proof-id="p7-proof">
+<div class="proof-head">
+<div><strong>Capture obligatoire :</strong> montrez les fonctions corrigées ou complétées et l’exécution finale du programme.</div>
+</div>
+<div class="proof-body" tabindex="0" title="Cliquez ici puis collez une image depuis le presse-papiers avec Ctrl+V">
+<div class="proofEmpty"><button class="btnCapture proofInsertLink" type="button">Insérer</button> ici la capture demandée.<div class="proofPasteHint">ou collez une image enregistrée dans le presse-papiers avec Ctrl+V.</div></div>
+<img alt="Capture de l’étudiant" class="proofImg"/>
+<input accept="image/*" class="proofFile" hidden="" type="file"/>
+<div class="proofBodyActions"><button class="btnClear proofRemoveLink" type="button">retirer la capture</button></div>
+</div>
+</div>
+<div class="callout spaced-block"><strong>Questions pédagogiques</strong><ul class="list"><li>Pourquoi la fonction <strong>compter_mots_avec_a</strong> doit-elle appeler <strong>contient_a(mot)</strong> au lieu de refaire la même vérification directement dans son corps ?</li><li>Quelle comparaison faut-il corriger dans <strong>mot_plus_long</strong> pour que la fonction retourne réellement le mot le plus long ?</li><li>À quoi servent les trois appels <strong>print(...)</strong> à la fin du programme principal et que montrent-ils sur le travail des fonctions ?</li></ul><div class="answer-area"><textarea class="team-input answerbox-large" id="p7-answer" placeholder="Rédigez ici vos réponses de manière claire et complète..."></textarea></div></div>
+</div>
+</section>
+</div>
+</section>
+<section class="part" id="partie-8">
+<div class="part-header"><h2 class="part-title">Partie 7 — Bilan final</h2></div>
+<div class="part-body">
+<section class="section-block line-section">
+<h3 class="section-title" id="p8-s1">Vérification de fin de labo</h3>
+<div class="section-body">
+<p>À travers ces six tâches, vous avez réutilisé progressivement les fonctions avec des chaînes, des listes, des conditions, des corrections de logique et un mini programme plus complet. Cette progression vise à montrer qu’une fonction sert à organiser le programme, à éviter les répétitions et à traiter un problème précis de manière claire.</p>
+<div class="table-wrap">
+<table class="capture-checklist-table">
+<thead>
+<tr>
+<th>Capture obligatoire</th>
+<th>Ce que la capture doit montrer</th>
+<th>Insérée</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Tâche 1</td>
+<td>La fonction de comptage des voyelles complétée et testée.</td>
+<td class="check-cell"><input aria-label="Capture de la tâche 1" class="capture-check" data-proof-target="p2-proof" type="checkbox"/></td>
+</tr>
+<tr>
+<td>Tâche 2</td>
+<td>La fonction de vérification de liste corrigée avec ses résultats.</td>
+<td class="check-cell"><input aria-label="Capture de la tâche 2" class="capture-check" data-proof-target="p3-proof" type="checkbox"/></td>
+</tr>
+<tr>
+<td>Tâche 3</td>
+<td>La fonction de classement modifiée avec les trois cas.</td>
+<td class="check-cell"><input aria-label="Capture de la tâche 3" class="capture-check" data-proof-target="p4-proof" type="checkbox"/></td>
+</tr>
+<tr>
+<td>Tâche 4</td>
+<td>La fonction de comptage des occurrences complétée et exécutée.</td>
+<td class="check-cell"><input aria-label="Capture de la tâche 4" class="capture-check" data-proof-target="p5-proof" type="checkbox"/></td>
+</tr>
+<tr>
+<td>Tâche 5</td>
+<td>La fonction écrite par l’étudiant pour compter les nombres pairs.</td>
+<td class="check-cell"><input aria-label="Capture de la tâche 5" class="capture-check" data-proof-target="p6-proof" type="checkbox"/></td>
+</tr>
+<tr>
+<td>Tâche 6</td>
+<td>Le mini programme complet corrigé puis exécuté.</td>
+<td class="check-cell"><input aria-label="Capture de la tâche 6" class="capture-check" data-proof-target="p7-proof" type="checkbox"/></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout spaced-block">
+<strong>Prolongement possible</strong>
+<ul class="list">
+<li>Compter le nombre de lettres majuscules dans un texte.</li>
+<li>Vérifier si une liste contient au moins un zéro.</li>
+<li>Compter combien de mots d’une liste commencent par la lettre <strong>p</strong>.</li>
+<li>Retourner le nombre de mots ayant plus de 5 caractères.</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+</section>
+<section class="card" id="export">
+<h2>Exporter en PDF</h2>
+<ul class="list">
+<li>Vérifiez que toutes les captures obligatoires sont visibles dans la page.</li>
+<li>Vérifiez que vos réponses rédigées sont complètes et lisibles.</li>
+<li>Cliquez sur <strong>Exporter en PDF</strong>, puis choisissez <strong>Enregistrer en PDF</strong>.</li>
+<li>Remettez ensuite le fichier PDF selon la consigne donnée.</li>
+</ul>
+<div aria-label="Export" class="exportbar exportbar-spaced render-export">
+<button class="actionbtn" id="exportPdf" type="button">Exporter en PDF</button>
+</div>
+<div class="callout spaced-block export-callout">
+<strong>Important :</strong> si une capture, une réponse ou une information n’apparaît pas dans la page avant l’export, elle ne sera pas dans le PDF.
+</div>
+</section>
+<footer class="course-footer">
+<div class="course-footer-left">Version 2026</div>
+<div class="course-footer-right">© <a class="footer-author-link" href="droits.html">Anis Ghaieb</a> — Support pédagogique original — Tous droits réservés</div>
+</footer>
+</main>
+</body>
+</html>

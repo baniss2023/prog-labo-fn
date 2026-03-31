@@ -1,0 +1,14 @@
+pack_labo_fonctions_6_taches/
+├── labo-fonctions-algorithme-python.html
+├── droits.html
+├── assets/
+│   ├── style.css
+│   ├── print.css
+│   ├── script.js
+│   ├── unified_style.css
+│   └── unified_script.js
+└── img/
+    ├── anis.png
+    ├── chap.png
+    ├── college.png
+    └── pc.png
